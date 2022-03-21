@@ -73,8 +73,11 @@ short leerComentarios(comp_lexico comp){//pARA LEER TODOS LOS COMENTARIOS
 
 short siguiente_comp_lexico(comp_lexico *comp){
   char c = EOF;
+
   short state = 0;//Estado del automata
+
   short especial = 0;//Caracteres especiales strings
+  
   short flag_number = 0;//Nos indica si un numero es entero o flotante
   short flag_sign = 0;//Nos indica si un numero tiene signo en el exponente
   short flag_exponent = 0;//Nos indica si un numero tiene exponente
