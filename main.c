@@ -1,10 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 #include "analizadorsintactico.h"
 #include "tablasimbolos.h"
 #include "sistemadeentrada.h"
-
-#include "definiciones.h"
 #include "analizadorlexico.h"
 //ALT+SHIFT+T
 

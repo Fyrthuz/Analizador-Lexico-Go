@@ -4,7 +4,6 @@
 #include "analizadorlexico.h"
 #include "sistemadeentrada.h"
 #include "tablasimbolos.h"
-#define N 16//tamaño maximo permitido lexema tamaño de un buffer del doble buffer
 
 void analizar_codigo(){
   comp_lexico lex;
