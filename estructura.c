@@ -43,11 +43,7 @@ short inserta(abb *a, char *lexema,short tipo){
     *a = (abb)malloc(sizeof(struct nodo));
     (*a)->info.lexema = (char*)malloc(strlen(lexema)+1*sizeof(char));
     strcpy((*a)->info.lexema,lexema);
-    if(tipo == -1){
-      (*a)->info.tipo = ID;
-    }else{
-      (*a)->info.tipo = tipo;
-    }
+    (*a)->info.tipo = tipo;
     (*a)->izq = NULL;
     (*a)->der = NULL;
     //printf("Se ha insertado el elemento %s del tipo %d\n",lexema,ID);

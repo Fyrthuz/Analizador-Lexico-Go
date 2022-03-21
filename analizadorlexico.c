@@ -129,7 +129,7 @@ short siguiente_comp_lexico(comp_lexico *comp){
           c = sigCaracter();
         }while(isalpha(c) || isdigit(c) || c == '_');
         devolverCaracter();//el _ es una identificador nulo
-        comp->tipo = insertar_buscaEnTabla(comp->lexema,-1);//-1 Si sabemos el tipo que es desde aqui
+        comp->tipo = insertar_buscaEnTabla(comp->lexema,ID);//Si resulta que ya existe en la tabla el lexema nos devolverá el tipo de lexema que es
         state = 5;
         break;
       case 2://numeros
