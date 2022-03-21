@@ -1,0 +1,2 @@
+
+void analizar_codigo();

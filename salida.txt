@@ -1,0 +1,361 @@
+
+
+---------------------------Tabla de simbolos----------------------------
+	Lexema:break			Componente Lexico:300	
+	Lexema:default			Componente Lexico:301	
+	Lexema:case			Componente Lexico:305	
+	Lexema:chan			Componente Lexico:310	
+	Lexema:const			Componente Lexico:315	
+	Lexema:continue			Componente Lexico:320	
+	Lexema:func			Componente Lexico:302	
+	Lexema:defer			Componente Lexico:306	
+	Lexema:else			Componente Lexico:311	
+	Lexema:fallthrough			Componente Lexico:316	
+	Lexema:for			Componente Lexico:321	
+	Lexema:float32			Componente Lexico:325	
+	Lexema:interface			Componente Lexico:303	
+	Lexema:go			Componente Lexico:307	
+	Lexema:goto			Componente Lexico:312	
+	Lexema:if			Componente Lexico:317	
+	Lexema:import			Componente Lexico:322	
+	Lexema:select			Componente Lexico:304	
+	Lexema:map			Componente Lexico:308	
+	Lexema:package			Componente Lexico:313	
+	Lexema:range			Componente Lexico:318	
+	Lexema:return			Componente Lexico:323	
+	Lexema:real			Componente Lexico:326	
+	Lexema:struct			Componente Lexico:309	
+	Lexema:switch			Componente Lexico:314	
+	Lexema:type			Componente Lexico:319	
+	Lexema:var			Componente Lexico:324	
+
+-----------------------------------------------------------------------
+
+
+<313,package>
+
+<329,main>
+
+<322,import>
+
+<330,fmt>
+
+<302,func>
+
+<329,sum>
+
+<40,(>
+
+<329,s>
+
+<91,[>
+
+<93,]>
+
+<325,float32>
+
+<44,,>
+
+<329,c>
+
+<310,chan>
+
+<325,float32>
+
+<41,)>
+
+<123,{>
+
+<324,var>
+
+<329,sum>
+
+<325,float32>
+
+<61,=>
+
+<327,0>
+
+<321,for>
+
+<95,_>
+
+<44,,>
+
+<329,v>
+
+<354,:=>
+
+<318,range>
+
+<329,s>
+
+<123,{>
+
+<329,sum>
+
+<334,+=>
+
+<329,v>
+
+<125,}>
+
+<329,c>
+
+<335,<->
+
+<329,sum>
+
+<125,}>
+
+<302,func>
+
+<329,main>
+
+<40,(>
+
+<41,)>
+
+<123,{>
+
+<329,s>
+
+<354,:=>
+
+<91,[>
+
+<93,]>
+
+<325,float32>
+
+<123,{>
+
+<327,2>
+
+<44,,>
+
+<326,real>
+
+<40,(>
+
+<331,1.e0+0i>
+
+<41,)>
+
+<44,,>
+
+<326,real>
+
+<40,(>
+
+<331,1.e+0i>
+
+<41,)>
+
+<44,,>
+
+<332,0xBadFace42>
+
+<42,*>
+
+<327,1e-11>
+
+<44,,>
+
+<45,->
+
+<327,9>
+
+<44,,>
+
+<328,4.e+0>
+
+<44,,>
+
+<328,.1273E2>
+
+<125,}>
+
+<329,c>
+
+<354,:=>
+
+<329,make>
+
+<40,(>
+
+<310,chan>
+
+<325,float32>
+
+<41,)>
+
+<307,go>
+
+<329,sum>
+
+<40,(>
+
+<329,s>
+
+<91,[>
+
+<58,:>
+
+<329,len>
+
+<40,(>
+
+<329,s>
+
+<41,)>
+
+<47,/>
+
+<327,2>
+
+<93,]>
+
+<44,,>
+
+<329,c>
+
+<41,)>
+
+<307,go>
+
+<329,sum>
+
+<40,(>
+
+<329,s>
+
+<91,[>
+
+<329,len>
+
+<40,(>
+
+<329,s>
+
+<41,)>
+
+<47,/>
+
+<327,2>
+
+<58,:>
+
+<93,]>
+
+<44,,>
+
+<329,c>
+
+<41,)>
+
+<329,i>
+
+<44,,>
+
+<329,j>
+
+<354,:=>
+
+<335,<->
+
+<329,c>
+
+<44,,>
+
+<335,<->
+
+<329,c>
+
+<329,fmt>
+
+<46,.>
+
+<329,Println>
+
+<40,(>
+
+<330,Partial results and "Total" sum:>
+
+<41,)>
+
+<59,;>
+
+<329,fmt>
+
+<46,.>
+
+<329,Println>
+
+<40,(>
+
+<329,i>
+
+<44,,>
+
+<329,j>
+
+<44,,>
+
+<329,i>
+
+<43,+>
+
+<329,j>
+
+<41,)>
+
+<125,}>
+
+-------------Analisis lexico finalizado-----------
+
+
+---------------------------Tabla de simbolos----------------------------
+	Lexema:break			Componente Lexico:300	
+	Lexema:Println			Componente Lexico:329	
+	Lexema:default			Componente Lexico:301	
+	Lexema:case			Componente Lexico:305	
+	Lexema:c			Componente Lexico:329	
+	Lexema:chan			Componente Lexico:310	
+	Lexema:const			Componente Lexico:315	
+	Lexema:continue			Componente Lexico:320	
+	Lexema:func			Componente Lexico:302	
+	Lexema:defer			Componente Lexico:306	
+	Lexema:else			Componente Lexico:311	
+	Lexema:fallthrough			Componente Lexico:316	
+	Lexema:for			Componente Lexico:321	
+	Lexema:float32			Componente Lexico:325	
+	Lexema:fmt			Componente Lexico:329	
+	Lexema:interface			Componente Lexico:303	
+	Lexema:go			Componente Lexico:307	
+	Lexema:goto			Componente Lexico:312	
+	Lexema:if			Componente Lexico:317	
+	Lexema:i			Componente Lexico:329	
+	Lexema:import			Componente Lexico:322	
+	Lexema:select			Componente Lexico:304	
+	Lexema:map			Componente Lexico:308	
+	Lexema:main			Componente Lexico:329	
+	Lexema:len			Componente Lexico:329	
+	Lexema:j			Componente Lexico:329	
+	Lexema:make			Componente Lexico:329	
+	Lexema:package			Componente Lexico:313	
+	Lexema:range			Componente Lexico:318	
+	Lexema:return			Componente Lexico:323	
+	Lexema:real			Componente Lexico:326	
+	Lexema:s			Componente Lexico:329	
+	Lexema:struct			Componente Lexico:309	
+	Lexema:switch			Componente Lexico:314	
+	Lexema:sum			Componente Lexico:329	
+	Lexema:type			Componente Lexico:319	
+	Lexema:var			Componente Lexico:324	
+	Lexema:v			Componente Lexico:329	
+
+-----------------------------------------------------------------------
+
+
+-----------------------Tabla destruida----------------------------

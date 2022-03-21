@@ -1,0 +1,52 @@
+Entrada son caracteres
+Termina con el EOF
+Salida Secuencia de componentes léxicos (tokens)
+caracteres que se identifican con un componente léxico ----> LEXEMA
+
+Identificadores secuencia de caracteres y numeros que empiezan por una letra
+
+Sudar de los comentarios
+
+Caracteres alfanumericos de un caracter siempre son identificadores(tabla de simbolos)
+
+SIMBOLOS DE UN CARACTER DEVOLVEMOS EL CARACTER ASCII
+
+DUDA (\n,\t y espacio no se consideran) se muestran por pantalla ---> NO SE HACE
+
+ARCHIVO definiciones cada define es como un automata
+
+
+PALABRAS RESERVADAS GO
+
+break        default      func         interface    select
+case         defer        go           map          struct
+chan         else         goto         package      switch
+const        fallthrough  if           range        type
+continue     for          import       return       var
+
+
+MAIN:
+1-Iniciliza estructrura de datos (tabla de simbolos,etc)
+2-Llama al analizador
+3-Fase de finalizacion(limpiamos memoria)
+
+
+Tambien va a haber un módulo de errores
+
+
+Tabla simbolos --> en esta practica solo hay un bloque en la tabla de simbolos (se necesitaria un analisis sintactico)
+
+TABLA SIMBOLOS
+LEXEMA  CODIGO
+package entero
+
+Si no esta el lexema leido se inserta en la tabla
+
+
+HEXADECIMAL,BINARIO,OCTAL,ENTERO
+
+AUTOMATA DE AUTOMATAS PARA SABER QUE AUTOMATA HAY QUE USAR EN FUNCION DEL LEXEMA LEIDO
+
+gestion centralizada de errores
+Error al abrir ficheros
+Tamaño lexema muy grande
