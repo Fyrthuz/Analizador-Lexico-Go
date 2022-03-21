@@ -4,7 +4,7 @@ Utilizar el comando "dos2unix *" para que se pueda ejecutar en linux de manera a
 
 Comando time ./compilador para medir el tiempo de ejecución
 
-Comando valgrind ./compilador para comprobar que libera toda la MENOR_MENOR_IGUAL
+Comando valgrind ./compilador para comprobar que libera toda la memoria
 
 GUION PRACTICA
 Práctica 1
