@@ -1,12 +1,5 @@
-
-typedef struct{
-  char *lexema;
-  short tipo;
-}elemento;
-
-//hay un short bloque
-
-typedef void *abb;
+//Puntero a una direccion de memoria es un tipo opaco desde fuera no se sabe la estructura del abb
+typedef void* abb;
 
 void crea(abb *a);
 void destruye(abb *a);
