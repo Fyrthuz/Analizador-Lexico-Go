@@ -17,7 +17,9 @@ void analizar_codigo(){
       //printf("\n--------------%d----------",i);
       i++;
       //if(i==120)break;
+      //
     }
+
   }
 
   printf("\n-------------Analisis lexico finalizado-----------\n");
