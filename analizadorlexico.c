@@ -138,26 +138,11 @@ short siguiente_comp_lexico(comp_lexico *comp){
       case 2://numeros
       copiar(c,comp);
       c=sigCaracter();
-      if(c=='x' || c=='X'){
-        num_type = 1;
-      }else if (c=='b' || c=='B') {
-        num_type = 2;
-      }else if (c=='o' || c=='O') {
-        num_type = 3;
-      }else if(isdigit(c)){//decimales
-        num_type = 0;
-      }else{
-        if(c!='e' && c!='E' && c!='p' && c!='P' && c!='.'){
-          devolverCaracter();
-        }
-        state = 5;
-      }
-        do{
-          if(isdigit(c) || isalpha(c) || c=='_' || c== '+' || c=='-' || c=='.'){
-            copiar(c,comp);
+        while(isdigit(c) || isalpha(c) || c=='_' || c == '.' || c=='+' || c=='-'){
+          copiar(c,comp);
+          if(c=='x'){
+            num_type=1;
           }
-          c=sigCaracter();
-
           if(c=='.'){
             if(flag_number==0){//Solo puede haber un punto
               flag_number = 1;
@@ -193,11 +178,14 @@ short siguiente_comp_lexico(comp_lexico *comp){
             flag_imaginary = 1;
 
           }
-        }while(isdigit(c) || isalpha(c) || c=='_' || c == '.' || c=='+' || c=='-');
+
+          c=sigCaracter();
+        };
         devolverCaracter();
         if(flag_imaginary){
           comp->tipo = IMAGINARIO;
         }else if(flag_number){//Flotantes
+          printf("YOOOS\n");
           comp->tipo = FLOTANTE;
         }else{//decimales normales
           comp->tipo = ENTERO;
