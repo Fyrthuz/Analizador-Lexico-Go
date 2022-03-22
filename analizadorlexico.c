@@ -77,7 +77,7 @@ short siguiente_comp_lexico(comp_lexico *comp){
   short state = 0;//Estado del automata
 
   short especial = 0;//Caracteres especiales strings
-  
+
   short flag_number = 0;//Nos indica si un numero es entero o flotante
   short flag_sign = 0;//Nos indica si un numero tiene signo en el exponente
   short flag_exponent = 0;//Nos indica si un numero tiene exponente
@@ -215,16 +215,16 @@ short siguiente_comp_lexico(comp_lexico *comp){
         }else{//decimales normales
           switch (num_type) {
             case 0:
-              comp->tipo = DECIMAL;
+              comp->tipo = ENTERO_DECIMAL;
               break;
             case 1://HEXADECIMAL
-              comp->tipo = HEXADECIMAL;
+              comp->tipo = ENTERO_HEXADECIMAL;
               break;
             case 2:
-              comp->tipo = BINARIO;
+              comp->tipo = ENTERO_BINARIO;
               break;
             case 3:
-              comp->tipo = OCTAL;
+              comp->tipo = ENTERO_OCTAL;
               break;
           }
         }

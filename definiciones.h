@@ -26,12 +26,12 @@
 #define FLOAT32 325//float32
 #define REAL 326//real
 //Fin de las palabras reservadas
-#define DECIMAL 327//Numero entero
+#define ENTERO_DECIMAL 327//Numero entero
 #define FLOAT 328//Numero flotante
 #define ID 329//identifica un identificador
 #define STRING 330//" "
 #define IMAGINARIO 331//imaginary
-#define HEXADECIMAL 332//0x
+#define ENTERO_HEXADECIMAL 332//0x
 #define ASIGNACION 333//:=
 #define SUMA_Y_ASIGNACION 334//+=
 #define OPERADOR_FLECHA 335//<-
@@ -61,8 +61,8 @@
 #define MAYOR_MAYOR 359//>>
 #define MAYOR_MAYOR_IGUAL 360//>>=
 #define COMENTARIO_LINEA 361// //
-#define OCTAL 362//0o
-#define BINARIO 363//ob
+#define ENTERO_OCTAL 362//0o
+#define ENTERO_BINARIO 363//ob
 #define HEXADECIMAL_FLOTANTE 364//0x...
 #define OCTAL_FLOTANTE 365//0o...
 #define BINARIO_FLOTANTE 366// 0b...
