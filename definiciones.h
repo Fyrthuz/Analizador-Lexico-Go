@@ -49,7 +49,7 @@
 #define AMPERSAND_ELEVADO 348//&^
 #define AMPERSAND_ELEVADO_IGUAL 349//&^=
 #define OR 350//||
-#define OR_IGUAL 351//\=
+#define OR_IGUAL 351//|=
 #define ELEVADO_IGUAL 352//^=
 #define EXCLAMACION_IGUAL 353//!=
 #define DOS_PUNTOS_IGUAL 354//:=

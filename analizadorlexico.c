@@ -140,7 +140,7 @@ short siguiente_comp_lexico(comp_lexico *comp){
       c=sigCaracter();
         while(isdigit(c) || isalpha(c) || c=='_' || c == '.' || c=='+' || c=='-'){
           copiar(c,comp);
-          if(c=='x'){
+          if(c=='x' || c=='X'){//Si es hexadecimal el exponente será con la letra p
             num_type=1;
           }
           if(c=='.'){
