@@ -198,35 +198,9 @@ short siguiente_comp_lexico(comp_lexico *comp){
         if(flag_imaginary){
           comp->tipo = IMAGINARIO;
         }else if(flag_number){//Flotantes
-          switch (num_type) {
-            case 0:
-              comp->tipo = FLOAT;
-              break;
-            case 1://HEXADECIMAL
-              comp->tipo = HEXADECIMAL_FLOTANTE;
-              break;
-            case 2:
-              comp->tipo = BINARIO_FLOTANTE;
-              break;
-            case 3:
-              comp->tipo = OCTAL_FLOTANTE;
-              break;
-          }
+          comp->tipo = FLOTANTE;
         }else{//decimales normales
-          switch (num_type) {
-            case 0:
-              comp->tipo = ENTERO_DECIMAL;
-              break;
-            case 1://HEXADECIMAL
-              comp->tipo = ENTERO_HEXADECIMAL;
-              break;
-            case 2:
-              comp->tipo = ENTERO_BINARIO;
-              break;
-            case 3:
-              comp->tipo = ENTERO_OCTAL;
-              break;
-          }
+          comp->tipo = ENTERO;
         }
         state = 5;
         break;
