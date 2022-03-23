@@ -12,7 +12,6 @@
 long linea = 1;
 long tam = 8;//Tamaño del lexema
 long aumento = 8;//Aumento al realizar realloc de la memoria cuando se lee un lexema
-comp_lexico comp;
 
 void inicializarCompLexico(comp_lexico *comp){
   if(comp->lexema == NULL){
