@@ -83,6 +83,7 @@ short siguiente_comp_lexico(comp_lexico *comp){
   short flag_exponent = 0;//Nos indica si un numero tiene exponente
   short flag_imaginary = 0;//Nos indica si un numero es imaginario
   short num_type = 0;//Indica si un numero empieza por 0x,ob,oO,etc
+  short show__ = 0;//Indica si aparecio una barrabaja
   //Inicializar componente lexico
   inicializarCompLexico(comp);
   while(1){
@@ -143,6 +144,17 @@ short siguiente_comp_lexico(comp_lexico *comp){
           if(c=='x' || c=='X'){//Si es hexadecimal el exponente será con la letra p
             num_type=1;
           }
+          if(c=='_'){
+            switch (show__) {
+              case 0:
+                show__ = 1;
+                break;
+              case 1:
+                errorLexico(linea);
+            }
+          }else{
+            show__ = 0;
+          }
           if(c=='.'){
             if(flag_number==0){//Solo puede haber un punto
               flag_number = 1;
@@ -185,7 +197,6 @@ short siguiente_comp_lexico(comp_lexico *comp){
         if(flag_imaginary){
           comp->tipo = IMAGINARIO;
         }else if(flag_number){//Flotantes
-          printf("YOOOS\n");
           comp->tipo = FLOTANTE;
         }else{//decimales normales
           comp->tipo = ENTERO;
