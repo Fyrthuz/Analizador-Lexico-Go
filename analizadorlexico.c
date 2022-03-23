@@ -207,16 +207,18 @@ short siguiente_comp_lexico(comp_lexico *comp){
         break;
       case 3://Strings
         c = sigCaracter();
-        while(!(c == '"' && especial == 0)){
-          if((c=='\\' && especial != 0) || c!='\\'){
-            copiar(c,comp);
-            aceptar_lexema();
-          }
+        while(!(c == '"' && especial == 0) && c!=EOF){
+          copiar(c,comp);
+          aceptar_lexema();
+
           especial = 0;
           if(c == '\\'){
             especial = 1;
           }
           c = sigCaracter();
+        }
+        if(c==EOF){
+          errorLexico(linea);
         }
         comp->tipo = STRING;
         state = 5;
