@@ -11,12 +11,10 @@ void analizar_codigo(){
   lex.lexema = NULL;
   imprimirTabla();
   while((i=siguiente_comp_lexico(&lex))!=EOF){
-    if(lex.tipo != -2){
+    if(lex.tipo != '\n'){
       printf("\n<%hd,%s>\n",lex.tipo,lex.lexema);
-      //printf("\n--------------%d----------",i);
-      i++;
-      //if(i==120)break;
-      //
+    }else{
+      printf("\n<%hd,\\n>\n",lex.tipo);
     }
 
   }

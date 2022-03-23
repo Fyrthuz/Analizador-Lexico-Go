@@ -93,11 +93,14 @@ short siguiente_comp_lexico(comp_lexico *comp){
       case 0://Primer estado del automata de automatas
         c = sigCaracter();
         if(c == ' ' || c == '\t' || c == '\n'){
-          if(c == '\n'){
-            linea++;
-            aceptar_lexema();
-          }
           state=0;
+          if(c == '\n'){//Si es \n acepto y imprimo por pantalla
+            linea++;
+            copiar(c,comp);
+            comp->tipo='\n';
+            aceptar_lexema();
+            state=5;
+          }
         }else if(c == EOF){//Si es caracter nulo  o EOF se acaba la ejecucion
           state = -1;
         }else if(c==';' || c == '(' || c == ')' || c == '{' || c == '}' || c == '[' || c == ']' || c == ':' || c==','){
@@ -210,7 +213,7 @@ short siguiente_comp_lexico(comp_lexico *comp){
             aceptar_lexema();
           }
           especial = 0;
-          if(c == 92){
+          if(c == '\\'){
             especial = 1;
           }
           c = sigCaracter();
@@ -281,9 +284,6 @@ short siguiente_comp_lexico(comp_lexico *comp){
             if(c=='='){
               copiar(c,comp);
               comp->tipo = DIV_Y_ASIGNACION;
-              state = 5;
-            }else if (c == ' ' && c == '\t' && c == '\n'){
-              comp->tipo = 47;
               state = 5;
             }else if(c=='*'){
               comp->tipo = INICIO_COMENTARIO;
