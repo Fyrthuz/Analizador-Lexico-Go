@@ -29,6 +29,7 @@ void destruye(abb *a){
     (*a)->izq = NULL;
     (*a)->der = NULL;
     free(((*a)->info.lexema));
+    (*a)->info.lexema = NULL;
     free(*a);
     *a = NULL;
   }
