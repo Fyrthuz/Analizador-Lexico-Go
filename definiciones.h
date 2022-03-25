@@ -23,8 +23,6 @@
 #define IMPORT 322//import
 #define RETURN 323//return
 #define VAR 324//var
-#define FLOAT32 325//float32
-#define REAL 326//real
 //Fin de las palabras reservadas
 #define ENTERO 327//Numero entero
 #define FLOTANTE 328//Numero flotante

@@ -22,23 +22,12 @@ void inicializarCompLexico(comp_lexico *comp){
 }
 
 void copiar(char caracter,comp_lexico *comp){
-  char *aux;
-  strncat(comp->lexema,&caracter,sizeof(char));
   if(strlen(comp->lexema)==tam-1){
-    aux = (char *)malloc(tam*sizeof(char));
-    //Inicializamos y copiamos el contenido del lexema a la cadena auxiliar
-    memset(aux, '\0', tam);
-    strncat(aux,comp->lexema,tam);
-    //Aumentamos el tamaño máximo de lexema
-    comp->lexema = (char *)realloc(comp->lexema,tam+aumento);
-    tam +=aumento;
-    //Inicializamos y volvemos a copiar a devuelta al lexema para evitar errores
-    memset(comp->lexema, '\0', tam);
-    strncat(comp->lexema,aux,tam);
-    //Liberamos memoria
-    free(aux);
-    aux = NULL;
+    tam += aumento;
+    comp->lexema = realloc(comp->lexema,sizeof(char)*tam);
   }
+  strncat(comp->lexema,&caracter,sizeof(char));
+  comp->lexema[strlen(comp->lexema)]='\0';
 }
 
 short leerComentarios(comp_lexico comp){//pARA LEER TODOS LOS COMENTARIOS
@@ -141,8 +130,10 @@ short siguiente_comp_lexico(comp_lexico *comp){
       case 2://numeros
       copiar(c,comp);
       c=sigCaracter();
+
         while(isdigit(c) || isalpha(c) || c=='_' || c == '.' || c=='+' || c=='-'){
-          copiar(c,comp);
+
+            copiar(c,comp);
           if(c=='x' || c=='X'){//Si es hexadecimal el exponente será con la letra p
             num_type=1;
           }
@@ -178,11 +169,19 @@ short siguiente_comp_lexico(comp_lexico *comp){
             }
 
           }
+          if(flag_exponent==1 && isdigit(c)){
+            flag_exponent=2;
+          }
           if((c == '+' || c == '-')){
-            if(flag_sign == 0){
+            if(flag_sign == 0 && flag_exponent==1){
               flag_sign = 1;
-            }else{
-              errorLexico(linea);
+            }else if(flag_sign==1){
+              comp->lexema[strlen(comp->lexema)-1]='\0';
+              break;
+            }
+            if(flag_exponent==2){
+              comp->lexema[strlen(comp->lexema)-1]='\0';
+              break;
             }
           }
           if(c=='i' || c=='I'){//Nos reconocera los numeros imaginarios

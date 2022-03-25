@@ -5,12 +5,12 @@
 #include "tablasimbolos.h"
 #include "sistemadeentrada.h"
 #include "analizadorlexico.h"
+#include "gestionerrores.h"
 //ALT+SHIFT+T
 
 int main(int argc,char **argv){
     if(argc<2){
-      printf("No introdujo el fichero a analizar\n");
-      exit(0);
+      errorParametros();
     }
     inicializarTabla();
     iniciaSistema(argv[1]);

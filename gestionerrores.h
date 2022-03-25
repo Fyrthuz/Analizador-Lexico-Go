@@ -1,4 +1,6 @@
 
 void errorLexico(int linea);
 
-void errorArchivo();
+void errorArchivo(char *s);
+
+void errorParametros();

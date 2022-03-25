@@ -16,7 +16,7 @@ typedef struct{
 
 
 FILE *codigo;
-char nombre_archivo[64];
+char nombre_archivo[128];
 doblebuffer buffer;
 short cent=0;//centinela activo primero o segundo
 long caracteres=0L;//Posicion en el fichero
@@ -40,7 +40,6 @@ void inicializarDobleBuffer(){
    buffer.centinelas[cent].mem[N]=EOF;
    if(ferror(codigo)){
      errorArchivo(nombre_archivo);
-     exit(EXIT_FAILURE);
    }
    //printf("\n%ld   %ld\n",caracteres,tamanoano);
    //printf("\nBUFFER LLENADO: %s",buffer.centinelas[cent].mem);
@@ -90,7 +89,6 @@ void iniciaSistema(char *fichero){
   strcpy(nombre_archivo,fichero);
   if((codigo = fopen(fichero,"r")) == NULL){
     errorArchivo(nombre_archivo);
-    exit(EXIT_FAILURE);
   }
   //Llenamos el primer bufer
   fill_buffer();
