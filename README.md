@@ -1,20 +1,30 @@
 # Analizador-Lexico-Go
+Instrucciones ejecucion
 
-Utilizar el comando "dos2unix *" para que se pueda ejecutar en linux de manera apropiada y no de fallo
+Utilizar el comando "dos2unix *" para que se pueda ejecutar en sistemas Linux de manera apropiada y no de ningún tipo de fallo (aunque no debería darlo de todos modos solo por si acaso ya que desarrollé el código en Windows)
 
-Comando time ./compilador para medir el tiempo de ejecución
+Comando para producir el ejecutable ----> make
 
-Comando valgrind ./compilador para comprobar que libera toda la memoria
+Nombre del ejecutable -----> compilador
+
+Documento con el output(esta no se produce durante la ejecución del código la subo como documento anexo) -----> salida.txt
+
+Comando time(para medir el tiempo de ejecucion) ----> ./compilador <archivo> para medir el tiempo de ejecución
+
+Comando valgrind(para controlar que se libera toda la memoria) ----> ./compilador <archivo> para comprobar que libera toda la memoria
+
+Comando para ejecutarlo normal --.-> ./compilador <archivo>
+Especificaciones tecnicas
+
+Tabla de Simbolos: Arbol binario de búsqueda
+
+Sistema de entrada: Doble búffer con centinela
+
 
 GUION PRACTICA
 Práctica 1
 
 Construir un analizador léxico que devuelva los componentes léxicos que aparecen en el programa concurrentSum.go, codificado en el lenguaje Go.
-
-
-Tabla de Simbolos: Arbol binario de búsqueda
-
-Sistema de entrada: Doble búffer con centinela
 
 Orientación
 

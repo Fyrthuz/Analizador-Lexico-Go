@@ -7,4 +7,5 @@ typedef struct{
   short tipo;
 }comp_lexico;
 
+//Funcion que nos devolverá el siguiente componente léxico del programa
 short siguiente_comp_lexico(comp_lexico *comp);
