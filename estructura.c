@@ -71,12 +71,12 @@ void imprimirNodo(abb a){
   printf("\t\tComponente:%d\t\n",a->info.tipo);
 }
 
-//Funcion que cuando es llamda imprimer todo el arbol binario en un recorrido R-I-D
+//Funcion que cuando es llamda imprimer todo el arbol binario en un recorrido I-R-D
 void imprimir(abb a){
-    imprimirNodo(a);
     if(!vacio(a->izq)){
       imprimir(a->izq);
     }
+    imprimirNodo(a);
     if(!vacio(a->der)){
       imprimir(a->der);
     }

@@ -10,9 +10,9 @@
 abb tabla;
 
 void inicializarTabla(){
-  //Arrayq ue contiene los valores que corresponden a los diferentes lexemas de las palabras reservadas
-  short ids[] = {BREAK, DEFAULT, FUNC, INTERFACE, SELECT, CASE, DEFER, GO, MAP, STRUCT, CHAN, ELSE, GOTO, PACKAGE, SWITCH, CONST, FALLTHROUGH, IF, RANGE, TYPE, CONTINUE, FOR, IMPORT, RETURN, VAR};
-  char nombre[25][12] = {"break", "default", "func", "interface", "select", "case", "defer", "go", "map", "struct", "chan", "else", "goto", "package", "switch", "const", "fallthrough", "if", "range", "type", "continue", "for", "import", "return", "var"};
+  //Arrayq ue contiene los valores que corresponden a los diferentes lexemas de las palabras reservadas las insertamos ene ste orden para equilibrar lo máximo posible el árbol
+    short ids[] = {GOTO, ELSE, RETURN, CONST, FUNC, INTERFACE, SWITCH, CASE, DEFAULT, FOR, GO, IF, PACKAGE, STRUCT, TYPE, BREAK, CHAN, CONTINUE, DEFER, FALLTHROUGH, IMPORT, MAP, RANGE, SELECT, VAR};
+  char nombre[25][12] = {"goto", "else", "return", "const", "func", "interface", "switch", "case", "default", "for", "go", "if", "package", "struct", "type", "break", "chan", "continue", "defer", "fallthrough", "import", "map", "range", "select", "var"};
   //Instaciamos la tabla de símbolos
   crea(&tabla);
   //Iteramos sobre los arrays para introducir la información sobre las palabras reservadas en la tabla de símbolos
