@@ -97,3 +97,7 @@ Desde aquí se accede al fichero concurrentSum.go para analizarlo como un flujo 
 
 Documentación Go:
 https://go.dev/ref/spec#Keywords
+
+POSIBLES MEJORAS:
+
+Utilizar un arbol binario equilibrado sería una mejor opción, en mi perfil de git está el código para esta estructura de datos.
